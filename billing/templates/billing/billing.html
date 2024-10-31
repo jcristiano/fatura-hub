@@ -1,0 +1,41 @@
+{% extends "billing/base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Billing Section</h1>
+    <p>This is where you can manage your bills, accounts, and related documents.</p>
+    
+    <!-- Exemplo de tabela para listar contas -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Account Name</th>
+                <th>Amount Due</th>
+                <th>Due Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Electricity Bill</td>
+                <td>$100.00</td>
+                <td>2024-11-01</td>
+                <td>
+                    <a href="#" class="btn btn-primary">View</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Water Bill</td>
+                <td>$50.00</td>
+                <td>2024-11-05</td>
+                <td>
+                    <a href="#" class="btn btn-primary">View</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <!-- Adicione mais contas conforme necessário -->
+        </tbody>
+    </table>
+</div>
+{% endblock %}

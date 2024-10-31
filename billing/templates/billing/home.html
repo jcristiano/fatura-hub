@@ -1,0 +1,39 @@
+{% extends "billing/base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Welcome to FaturaHub</h1>
+    <p>Your one-stop solution for managing bills and service providers.</p>
+    <a href="{% url 'billing' %}" class="btn btn-primary btn-lg">Get Started</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Manage Your Bills</h5>
+                <p class="card-text">Easily track and manage your bills in one place.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Stay Organized</h5>
+                <p class="card-text">Keep all your invoices and receipts organized.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Easy Access</h5>
+                <p class="card-text">Access your billing information anytime, anywhere.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

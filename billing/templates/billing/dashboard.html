@@ -1,0 +1,65 @@
+{% extends "billing/base.html" %}
+
+{% block content %}
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">FaturaHub</div>
+        <div class="list-group list-group-flush">
+            <a href="{% url 'dashboard' %}" class="list-group-item list-group-item-action bg-light">Home</a>
+            <a href="{% url 'fornecedor_create' %}" class="list-group-item list-group-item-action bg-light">Cadastrar Fornecedor</a>
+            <a href="{% url 'conta_create' %}" class="list-group-item list-group-item-action bg-light">Cadastrar Conta</a>
+            <a href="{% url 'lancamento_create' %}" class="list-group-item list-group-item-action bg-light">Cadastrar Lançamento</a>
+            <a href="{% url 'arquivo_create' %}" class="list-group-item list-group-item-action bg-light">Cadastrar Arquivo</a>
+            <!-- Adicione mais links conforme necessário -->
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        </nav>
+
+        <div class="container-fluid">
+            <h1 class="mt-4">Dashboard</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Total Fornecedores</h5>
+                            <p>{{ indicadores.total_fornecedores }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Total Contas</h5>
+                            <p>{{ indicadores.total_contas }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Total Lançamentos</h5>
+                            <p>{{ indicadores.total_lancamentos }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Aqui você pode adicionar gráficos e outros componentes -->
+        </div>
+    </div>
+</div>
+
+<!-- Scripts para o menu toggle -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+{% endblock %}
